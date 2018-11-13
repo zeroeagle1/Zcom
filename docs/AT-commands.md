@@ -6,12 +6,13 @@ For raspi, when we do these command we should expect OK
     port.write('AT'+'\r\n')
     rcv = port.read(10)
     print rcv
-
+```
 The part 'AT+CMGF=1" enable text mode. If = 0 will be in PDU mode.
 ```python
     port.write('AT+CMGF=1'+'\r\n')  # Select Message format as Text mode 
     rcv = port.read(10)
     print rcv
+```
 
 Few **SEND** command
 
@@ -38,9 +39,10 @@ Few **RECIEVE** command
 | +CNMA      | New message acknowledgement |
 [EXEMPLE USAGE](https://www.developershome.com/sms/howToReceiveSMSUsingPC.asp)
 
-```GSM
+```AT
     AT+CMGL="ALL"
     +CMGL: 1,"REC READ","+85291234567",,"06/11/11,00:30:29+32"
     Hello, welcome to our SMS tutorial.
     +CMGL: 2,"REC READ","+85291234567",,"06/11/11,00:32:20+32"
+```
     A simple demo of SMS text messaging.
